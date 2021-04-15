@@ -1,0 +1,33 @@
+@import "../../__helpers.scss";
+@import "../../__variables.scss";
+
+.ingredients {
+  max-height: 300px;
+  @extend %scroll;
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+  .ingredients__newIngredient {
+    display: flex;
+    margin: 20px 0;
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+    @media (max-width: $mobile) {
+      display: block;
+      flex-direction: column;
+      width: 100%;
+    }
+    
+  }
+
+}
+
+
+.recipeButtons {
+  width: 100%;
+  @extend %flex-row-center-spaceBetween
+}

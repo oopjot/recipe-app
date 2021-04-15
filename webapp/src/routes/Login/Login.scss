@@ -1,0 +1,49 @@
+@import '../../__variables.scss';
+@import "../../__helpers.scss";
+
+.login {
+  @extend %wh100;
+  display: flex;
+  text-align: center;
+  .login__leftSection {
+    flex: 1.2;
+    @extend %flex-column-center;
+    padding: 80px;
+    @media (max-width: $tablet) {
+      padding: 80px;
+    }
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+      color: $background-orange;
+    }
+
+    small {
+      color: $color-lightgrey;
+      margin-bottom: 25px;
+    }
+    
+    .formButtons {
+        @extend %flex-row-center-spaceBetween;
+    }
+  }
+  .login__imageSection {
+    flex: 0.8;
+    @media (max-width: $tablet) {
+      display: none;
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+    img {
+      @extend %img-cover;
+      border-bottom-left-radius: 25px;
+      border-top-left-radius: 25px;
+    }
+  }
+}

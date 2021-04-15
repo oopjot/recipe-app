@@ -1,0 +1,74 @@
+@import "../../_variables";
+
+.textarea {
+  position: relative;
+  width: 450px;
+  height: 200px;
+  border: $border;
+  border-radius: $border-radius-small;
+  box-shadow: $box-shadow;
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+  label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: -1;
+    transition: all $transition;
+  }
+
+  .active {
+    transform: translateY(190px);
+    font-size: 0.75rem;
+    color: $color-lightgrey;
+  }
+
+  .error {
+    color: red;
+    transition: all $transition;
+  }
+
+  textarea {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;
+    border: none;
+    border-radius: inherit;
+    background: none;
+    outline: none;
+    padding-left: 10px;
+    resize: none;
+    padding: 10px;
+  }
+  
+}
+
+.borderError {
+  border-color: #ED2939;
+  transition: all $transition;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

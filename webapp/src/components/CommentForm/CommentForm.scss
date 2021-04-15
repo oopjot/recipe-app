@@ -1,0 +1,42 @@
+@import "../../__helpers.scss";
+@import "../../__variables.scss";
+
+.commentForm {
+    width: 100%;
+    @media (max-width: $mobile) {
+        width: 350px;
+    }
+    form {
+        @extend %flex-column-center-start;
+        .commentForm__comment {
+            @extend %flex-row-start;
+            padding-bottom: 20px;
+
+            .textarea {
+                @media (max-width: $mobile) {
+                    width: 260px;
+                }
+            }
+
+            .commentForm__comment__rating {
+                @extend %flex-column-center-start;
+                margin: 20px 0 0 20px;
+                @media (max-width: $mobile) {
+                    margin: 0;
+                }
+                select {
+                    width: 70px;
+                    box-shadow: $box-shadow;
+                }
+            }
+        }
+        .commentForm__buttons{
+            width: 540px;
+            @extend %flex-row-center-spaceBetween;
+            margin-bottom: 80px;
+            @media (max-width: $mobile) {
+                width: 350px;
+            }
+        }
+    }
+}

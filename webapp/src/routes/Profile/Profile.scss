@@ -1,0 +1,110 @@
+@import "../../__variables.scss";
+@import "../../__helpers.scss";
+@import "../../components/Button/Button.scss";
+
+.profile {
+  width: 100%;
+  height: calc(100vh - #{$navbar-height});
+  display: flex;
+
+  .profile__left {
+    flex: 1;
+    padding: 40px 80px 40px 40px;
+    position: relative;
+    @extend %flex-column-start;
+    @media (max-width: $mobile) {
+      padding: 20px;
+    }
+    
+    .profile__left__image {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: $border-radius-large;
+        margin-right: 40px;
+        @media (max-width: $mobile) {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .profile__left__imageSelector {
+        @extend %flex-column-spaceBetween-start;
+        height: 50%;
+        transform: translateY(20px);
+        .profile__left__imageSelector__fileInput {
+          @extend %flex-center;
+          @extend .btn;
+          @extend .primary;
+          @extend .soft;
+          input {
+            display: none;
+          }
+          small {
+            font-weight: 500;
+          }
+        }
+        p {
+          font-size: 0.75rem;
+          color: $color-lightgrey;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      @media (max-width: $tablet) {
+        font-size: 2.5rem;
+      }
+      @media (max-width: $mobile) {
+        font-size: 2rem;
+      }
+    }
+    h3 {
+      flex: 1;
+      margin-bottom: 20px;
+      font-weight: 400;
+      padding: 12px;
+      @media (max-width: $tablet) {
+        word-wrap: break-word;
+        max-width: 500px;
+        overflow: hidden;
+      }
+      @media (max-width: $mobile) {
+        word-wrap: break-word;
+        max-width: 300px;
+        overflow: hidden;
+      }
+    }
+
+    .profile__left__buttons {
+      width: 84%;
+      position: absolute;
+      bottom: 40px;
+      @extend %flex-row-center-spaceBetween;
+    }
+  }
+
+  .profile__image {
+    flex: 1;
+    @extend %flex-center;
+    img {
+      width: 80%;
+      height: 80%;
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+    @media (max-width: $mobile) {
+      display: none;
+      
+    }
+  }
+}

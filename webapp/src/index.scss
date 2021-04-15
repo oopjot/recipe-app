@@ -1,0 +1,13 @@
+@import "./__variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 17px;
+  font-family: $font-poppins;
+}
+
+body {
+  background: $background-offwhite;
+}

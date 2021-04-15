@@ -1,0 +1,107 @@
+@import "../../__variables.scss";
+@import "../../__helpers.scss";
+
+.userProfile {
+  width: 100%;
+  height: calc(100vh - #{$navbar-height});
+  display: flex;
+
+  .userProfile__left {
+    flex: 1;
+    padding: 40px 80px 40px 40px;
+    position: relative;
+    @extend %flex-column-start;
+    @media (max-width: $mobile) {
+      padding: 20px;
+    }
+
+    .userProfile__left__image {
+      width: 100%;
+      @extend %flex-row-center-spaceBetween;
+      padding-right: 40px;
+      @media (max-width: $tablet) {
+        margin-bottom: 80px;
+      }
+      
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: $border-radius-large;
+        @media (max-width: $tablet) {
+          width: 150px;
+          height: 150px;
+        }
+        @media (max-width: $mobile) {
+          width: 100px;
+          height: 100px;
+          margin-bottom: 40px;
+        }
+      }
+      .userProfile__left__info {
+        @extend %flex-column-center;
+        h4 {
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        small {
+            font-weight: 600;
+            font-size: 1.5rem;
+            @media (max-width: $mobile) {
+              font-size: 1rem;
+            }
+        }
+      }
+      .userProfile__left__imageSelector {
+        @extend %flex-column-spaceBetween-start;
+        height: 50%;
+        transform: translateY(20px);
+        p {
+          font-size: 0.75rem;
+          color: $color-lightgrey;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      @media (max-width: $mobile) {
+        font-size: 2rem;
+      }
+    }
+    h3 {
+      flex: 1;
+      margin-bottom: 20px;
+      font-weight: 400;
+      padding: 12px;
+      word-wrap: break-word;
+      max-width: 600px;
+      @media (max-width: $tablet) {
+        max-width: 600px;
+        overflow: hidden;
+      }
+      @media (max-width: $mobile) {
+        max-width: 300px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .userProfile__image {
+    flex: 1;
+    @extend %flex-center;
+    img {
+      width: 80%;
+      height: 80%;
+    }
+    @media (max-width: $tablet) {
+      display: none;    
+    }    
+    @media (max-width: $mobile) {
+      display: none;    
+    }
+  }
+}

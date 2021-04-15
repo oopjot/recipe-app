@@ -1,0 +1,102 @@
+@import "../../__variables.scss";
+
+.btn {
+  height: 50px;
+  width: 180px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  border-radius: $border-radius-small;
+  box-shadow: $box-shadow;
+  margin-bottom: 20px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 0;
+  }
+}
+
+.primary {
+  background: $background-orange;
+  border: $background-orange;
+  color: $background-offwhite;
+
+
+  &:hover {
+    background: $background-orange-light;
+    transform: translateY(1px);
+    transition: all $transition;
+  }
+}
+
+.soft {
+  border-radius: $border-radius-medium;
+  background: transparent;
+  border: $border;
+  color: $color-primary;
+  height: 50px;
+  text-align: left;
+  padding: 0 20px;
+
+  &:hover {
+    border: none;
+    transition: all $transition;
+  }
+
+  .active {
+    background: $background-orange;
+    border: $background-orange;
+    font-weight: 500;
+  }
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid $background-orange;
+  color: $background-orange;
+
+  &:hover {
+    background: $background-orange-light;
+    color: $background-offwhite;
+    transform: translateY(1px);
+    transition: all $transition;
+  }
+}
+
+.deleteBtn {
+  width: 50px;
+  height: 50px;
+  &:hover {
+    background-color: $background-orange-light;
+    color: $color-white;
+    border: $background-orange-light;
+    transition: all $transition;
+  }
+}
+
+.btnError {
+  color: red;
+  border: 2px solid red;
+  transition: all $transition;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

@@ -1,0 +1,60 @@
+@import "../../__variables.scss";
+@import "../../__helpers.scss";
+
+.myRecipes {
+    width: 100%;
+    height: calc(100vh - #{$navbar-height});
+    display: flex;
+    padding: 20px 40px;
+    @media (max-width: $tablet) {
+        display: block;
+        padding: 20px;
+    }
+    @media (max-width: $mobile) {
+        display: block;
+        padding: 20px;
+    }
+    
+    .myRecipes__left {
+        width: 450px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+        @extend %scroll;
+        @media (max-width: $tablet) {
+            justify-items: center;
+            width: 100%;
+            overflow: visible;
+            z-index: 10;
+        }
+        @media (max-width: $mobile) {
+            width: 100%;
+            overflow: visible;
+            z-index: 10;
+        }
+    }
+
+    .myRecipes__form {
+        flex: 1;
+        @extend %flex-column-center-start;
+        @media (max-width: $tablet) {
+            form {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                padding: 40px;
+            }
+        }
+        @media (max-width: $mobile) {
+            form {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                padding: 40px;
+            }
+        }
+    }
+}

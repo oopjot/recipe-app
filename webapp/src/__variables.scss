@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+$background-white: #fff;
+$background-offwhite: rgb(243, 242, 242);
+$background-orange: #fba835;
+$background-orange-light: #fdaa37;
+
+$color-white: #fff;
+$color-primary: #333;
+$color-lightgrey: rgb(69, 88, 94);
+$color-orange: #fba835;
+
+$border-radius-small: 15px;
+$border-radius-medium: 25px;
+$border-radius-large: 50%;
+
+$mobile: 480px;
+$tablet: 768px;
+$pc: 1200px;
+
+$box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
+-7px -7px 20px rgba(255, 255, 255, 0.1);
+
+$border: 2px solid rgb(223, 223, 223);
+
+$transition: 200ms ease-out;
+
+$font-poppins: "Poppins", sans-serif;
+$font-script: "Dancing Script", cursive;
+
+$navbar-height: 100px;
+$navbar-height-mobile: 80px;

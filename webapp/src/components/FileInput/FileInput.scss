@@ -1,0 +1,27 @@
+@import "../../__helpers.scss";
+@import "../../components/Button/Button.scss";
+
+.fileInput {
+  @extend %flex-center;
+  @extend .btn;
+  @extend .primary;
+  @extend .soft;
+  box-shadow: $box-shadow;
+  input {
+    display: none;
+  }
+  small {
+    font-weight: 500;
+  }
+  .error {
+    color: red;
+  }
+}
+.borderError {
+  border: 2px solid red
+}
+
+
+.formBtn {
+  margin: 20px 0;
+}

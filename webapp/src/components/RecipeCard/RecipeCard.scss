@@ -1,0 +1,67 @@
+@import "../../__variables.scss";
+@import "../../__helpers.scss";
+
+.card {
+  width: 420px;
+  height: 150px;
+  display: flex;
+  border-radius: $border-radius-medium;
+  box-shadow: $box-shadow;
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+  .card__image {
+    flex: 0.4;
+    @media (max-width: $mobile) {
+      flex: 1;
+    }
+    img {
+      border-top-left-radius: $border-radius-small;
+      border-bottom-left-radius: $border-radius-small;
+      @extend %img-cover;
+    }
+  }
+
+  .card__body {
+    flex: 0.8;
+    padding: 20px 40px;
+    @extend %flex-column-spaceBetween-start;
+    @media (max-width: $mobile) {
+      flex: 1;
+      padding: 10px 20px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: $color-primary;
+      @media (max-width: $mobile) {
+        max-width: 100px;
+        max-height: 70px;
+        overflow: hidden;
+        word-wrap: break-word;
+        
+      }
+
+      &:hover {
+        color: $background-orange;
+        transition: all $transition;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+    }
+    .card__body__rate {
+      p {
+        color: $color-lightgrey;
+      }
+    }
+  }
+  .card__button {
+    height: 50px;
+    transform: translate(-20px, 100%)
+  }
+}
